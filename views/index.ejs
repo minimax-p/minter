@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Northern Horizon ESP</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <script src="public/js/jquery.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin:0;
+        overflow: scroll;
+    }
+    h1 {
+        font-family: 'Playfair Display', serif;
+    }
+    h2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.3em;
+        margin: 0;
+    }
+    .nav {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        top: 0;
+        color: white;
+        background-color:#285A8C !important;
+        transition: background-color 0.1s, color 0.1s;
+        transition-delay: 0.1s;
+    }
+    .nav:hover{
+        background-color:white !important;
+        color: black
+    }
+    .nav {
+        background-color: white;
+    }
+    .title {
+        margin: 0 30px;
+    }
+
+
+    .list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-item {
+        margin: 30px;
+    }
+    .nav-item:hover {
+        color: #008dff;
+        cursor: pointer;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+
+        background-color: #f4f4f4;
+    }
+    .hero-text {
+        width: 60%;
+        max-width:600px;
+        padding: 30px;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .hero-text p {
+        font-size: 18px;
+        color: gray;
+    }
+    .hero-image img {
+        width: 85%;
+        height: auto;
+        offset-position: 100px;
+        max-width: 600px;
+        transform: translateY(15%) translateX(5%) scale(120%);
+    }
+
+    .section h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .section p {
+        line-height: 1.625em;
+        margin: 0 auto;
+        max-width: 480px;
+    }
+
+    footer {
+        text-align: center;
+    }
+    .black-btn{
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 15px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+        transition-delay: 0.1s;
+    }
+    .black-btn:hover{
+        cursor:pointer;
+        background-color: #0088ff
+    }
+    .white-btn{
+        border-radius: 20px;
+        background-color: #f6f5f7;
+        color: black;
+        border: none;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 15px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+        transition-delay: 0.1s;
+    }
+    .white-btn:hover{
+        cursor:pointer;
+        background-color: #e0e0e0;
+    }
+    button span {
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        animation: ripple 1s;
+        opacity: 0;
+    }
+
+    @keyframes ripple {
+        from {
+            opacity: 1;
+            transform: scale(0);
+        }
+        to {
+            opacity: 0;
+            transform: scale(10);
+        }
+    }
+    /*button {*/
+    /*    border-radius: 20px;*/
+    /*    background: linear-gradient(to right, #23bb90, #0064cd);   !important;*/
+    /*    color: white;*/
+    /*    border: none;*/
+    /*    font-size: 12px;*/
+    /*    font-weight: bold;*/
+    /*    padding: 12px 45px;*/
+    /*    letter-spacing: 1px;*/
+    /*    text-transform: uppercase;*/
+    /*}*/
+    /*button:hover{*/
+    /*    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;*/
+    /*}*/
+
+
+</style>
+<body ononline="onFunction()" onoffline="offFunction()">
+<div class="site" style="background-color:#f4f4f4" >
+    <nav class="nav" style="z-index: 1000000">
+        <div class="title">Northern Horizon</div>
+        <ul class="list">
+            <li class="nav-item" onclick="window.location.replace('/about')">About Us</li>
+            <li class="nav-item">Past Projects</li>
+        </ul>
+    </nav>
+    <div class="hero" style="background-image: linear-gradient(to right, #285A8C, #285A8C, #285A8C, #285A8C);">
+        <div class="hero-text">
+            <h1 style="font-size: 40px; color:white; text-align: center">We help students build skills</h1>
+            <p style="color:white; font-size: 17px; text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget euismod lectus, id euismod sapien.</p>
+            <br>
+        </div>
+        <div class="hero-image">
+            <img src="public/assets/team.png" alt="A team of people helping each other to build a lego tower.">
+        </div>
+    </div>
+    <div style="background: #f6f5f7;
+    flex-direction: column;
+    margin: -20px 0;
+    padding-top: 110px; padding-bottom: 50px">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <h2 style="text-align: center;">About Us</h2>
+            <p style="text-align: center; margin-left: 200px; margin-right: 200px; max-width: 600px">
+                Northern Horizon is a project-based
+                learning program for students to develop their career-oriented skills and
+                portfolios by simulating the professional working environment.</p>
+            <button class="black-btn">Read more</button>
+        </div>
+    </div>
+    <div style="background: black;
+    flex-direction: column;
+    padding-top: 50px; padding-bottom: 50px">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <h2 style="text-align: center; color: white">About Us</h2>
+            <p style="text-align: center; color: white; margin-left: 200px; margin-right: 200px; max-width: 600px">
+                Northern Horizon is a project-based
+                learning program for students to develop their career-oriented skills and
+                portfolios by simulating the professional working environment.</p>
+            <button class="white-btn">Read more</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function onFunction() {
+        alert("You are now online.");
+    }
+
+    function offFunction() {
+        alert("Your are offline. Some functionality may be unavailable.");
+    }
+</script>
+</html>
