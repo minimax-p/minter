@@ -1,8 +1,5 @@
 const bodyParser = require('body-parser');
-const serverConfig = require('../config/serverConfig');
-const fs = require("fs");
 const flash = require('connect-flash')
-const async = require('async');
 const cors = require('cors')
 module.exports = function (app) {
     app.use(bodyParser.urlencoded({extended: true}));
@@ -17,6 +14,11 @@ module.exports = function (app) {
         res.render('index.ejs', {
         });
     });
+    app.get('/main', function (req, res) {
+        res.setHeader("Access-Control-Allow-Origin", "*"); // Allow cross domain header
+        res.render('index2.ejs', {
+        });
+    });
     app.get('/about', function(req, res){
         res.setHeader("Access-Control-Allow-Origin", "*"); // Allow cross domain header
         res.render('about.ejs', {
@@ -27,4 +29,6 @@ module.exports = function (app) {
         res.render('projects.ejs', {
         });
     })
+
+
 }

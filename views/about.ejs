@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Northern Horizon ESP</title>
+    <link rel="stylesheet" href="../public/css/about.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/scroller.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="public/js/jquery.js"></script>
+</head>
+<style>
+    .nav {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        top: 0;
+        color: white;
+        background-color:#285A8C !important;
+        transition: background-color 0.1s, color 0.1s;
+        transition-delay: 0.1s;
+    }
+    .nav:hover{
+        background-color:white !important;
+        color: black
+    }
+    .nav {
+        background-color: white;
+    }
+</style>
+<body ononline="onFunction()" onoffline="offFunction()">
+<div class="site" style="background-color:#f4f4f4" >
+    <!--Navbar-->
+    <nav class="nav" style="z-index: 3">
+        <div class="title" onclick="window.location.replace('/')">
+            <img class="white-logo" src="../public/assets/logo.svg"
+                 style="width:80px; transform: translateY(2px); display: block;">
+        </div>
+        <ul class="list">
+            <li class="nav-item" >About Us</li>
+            <li class="nav-item" onclick="window.location.replace('/projects')">Past Projects</li>
+        </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <div class="about-blob" style="background-color:#f6f5f7;
+     height: 600px; background-image: url('public/assets/about-blob.png');">
+        <div style="display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;">
+            <h1 class="white"><span class="title1">ABOUT</span><span class="title2"> NORTHERN HORIZON</span></h1>
+            <h4 class="white title3">“Beyond a youth innovation incubator”</h4>
+        </div>
+        <div class="hero" style="background: none; z-index: 0">
+            <div class="hero-image flex-60">
+                <img src="public/assets/together.svg" alt="A team of people helping each other to build a lego tower.">
+            </div>
+            <div class="hero-text flex-40" style="margin-top: -120px">
+                <h2 style="color:white; text-align: center">OUR MISSION</h2>
+                <p style="color:white; font-size: 17px; text-align: center">Empowering
+                    young minds for transformative change through mentorship, resources,
+                    and collaboration, redefining boundaries and shaping
+                    a future where youth thrive as positive forces.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white"  style="padding-top: 200px; padding-bottom: 200px; color: #285A8C">
+        <div class="row" style="max-width: 1000px; margin-left: auto; margin-right: auto">
+            <div class="flex-40 column" style=" text-align: center; z-index: 1">
+                <h2>STORY</h2>
+                <img src="public/assets/dude.png" style="width: 130%">
+            </div>
+            <div class="flex-60" style="background-color: #D7E9FB; border-radius: 20px;
+                transform: translateY(-100px) scale(160%);
+                margin-right: 100px;
+                z-index: 0;
+                padding-right: 30px;
+                padding-left: 200px;">
+                <p style="
+                text-align: center; align-items: center;
+                font-size: 12px">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                </p>
+                <!--                <button class="white-btn">Contact Us</button>-->
+            </div>
+        </div>
+    </div>
+
+    <!--Support Us section    -->
+    <footer class="footer" style="margin-top: -200px">
+        <div class="bg-white " style="margin: -20px 0;padding-top: 50px; padding-bottom: 0">
+            <div class="column" style="display: flex; align-items: center">
+                <h2 style="text-align: center; color: black; font-size: 2em; padding: 50px">
+                    Building Tomorrow's Innovators,<br>
+                    One Student at a Time.</h2>
+                <div class="row">
+                    <button class="black-btn" style="border-radius: 0; margin:10px; font-size: 10px" >Contact Us</button>
+                    <button class="blue-btn" style="border-radius: 0; margin:10px;  font-size: 10px">Donate</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="bg-white" style="margin: -20px 0; padding-top: 110px; padding-bottom: 50px; display: flex;">
+            <div class="column" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+                <h3>Learn more</h3>
+                <a href="/">Home</a>
+                <a>About Us</a>
+                <a>Our projects</a>
+            </div>
+            <div class="column" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+                <h3>What we do</h3>
+                <a>Marketing solutions</a>
+                <a>Build a website</a>
+                <a>Tailored solutions</a>
+            </div>
+            <div class="column" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+                <h3>Legal</h3>
+                <a>Terms of Service</a>
+                <a>Privacy Policy</a>
+            </div>
+            <div class="column" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+                <h3>Talk to us</h3>
+                <a>boss.email@gmail.com</a>
+                <a>+1 (845)-281-9257</a>
+                <a>Facebook</a>
+                <a>LinkedIn</a>
+                <a>Twitter</a>
+
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-content">
+            <div>
+                <img src="public/assets/logo-blue.svg" alt="Logo" class="footer-logo">
+            </div>
+            <div>
+                <p style="color:black">&copy; 2023 Northern Horizon. All Rights Reserved.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script>
+    const navbar = document.querySelector('.nav');
+    const whiteLogo = document.querySelector('.white-logo');
+    const blackLogo = document.createElement('img');
+
+    // Set the source and attributes of the black logo
+    blackLogo.src = '../public/assets/logo-black.svg';
+    blackLogo.className = 'black-logo';
+    blackLogo.style.width = '80px';
+    blackLogo.style.transform="translateY(2px)";
+    blackLogo.style.display = 'none';
+
+    // Add the black logo to the DOM
+    const title = document.querySelector('.title');
+    title.appendChild(blackLogo);
+
+    // Event listener for hovering the navbar
+    navbar.addEventListener('mouseenter', function() {
+        // Hide the white logo and show the black logo
+        setTimeout(function() {
+            whiteLogo.style.display = 'none';
+            blackLogo.style.display = 'block';
+        }, 100);
+    });
+    navbar.addEventListener('mouseleave', function() {
+        // Show the white logo and hide the black logo
+        setTimeout(function() {
+            whiteLogo.style.display = 'block';
+            blackLogo.style.display = 'none';
+        }, 100);
+    });
+
+    function onFunction() {
+        alert("You are now online.");
+    }
+
+    function offFunction() {
+        alert("Your are offline. Some functionality may be unavailable.");
+    }
+</script>
+</html>

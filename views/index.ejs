@@ -3,66 +3,109 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Northern Horizon ESP</title>
-    <link rel="stylesheet" href="../public/css/index.css">
-    <script src="public/js/jquery.js"></script>
+    <title>Minh Pham</title>
+    <link rel="icon" type="image/png" href="../public/assets/Group%20959.png"/>
 </head>
+
 <style>
+
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+    @font-face {
+        font-family: "Nutty";
+        src: url("../public/assets/fonts/nutty_noisses/Nutty Noisses.otf") format("opentype");
+    }
+    @font-face {
+        font-family: "Rostrum";
+        src: url("../public/assets/SaiGonRostrum.otf") format("opentype");
+    }
+    @font-face {
+        font-family: "Cubano";
+        src: url("../public/assets/SaiGonCubano.otf") format("opentype");
+    }
+    @font-face {
+        font-family: "Poppins";
+        src: url("../public/assets/fonts/Poppins-Regular.ttf") format("opentype");
+    }
     body {
         font-family: 'Poppins', sans-serif;
         margin:0;
         overflow: scroll;
+        color: white;
+    }
+    * {
+        cursor: default;
+    }
+    .no-select {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
     }
     h1 {
-        font-family: 'Playfair Display', serif;
+        z-index: 1;
+        font-family: 'Cubano', sans-serif;
+        color: white;
+        font-size: 100px;
+        text-align: center
+    }
+    h1:hover {
+        background-color: white;
+        color: black;
+    }
+    .glitch {
+        color: white;
+    }
+    .glitch:hover {
+        background-color: white;
+        color: black;
     }
     h2{
-        font-family: 'Poppins', sans-serif;
+        z-index: 1;
+        font-family: 'Cubano', sans-serif;
         font-size: 2.3em;
         margin: 0;
     }
+    p {
+        z-index: 1;
+    }
     .nav {
-        position: sticky;
+        position: absolute;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        height: 60px;
-        top: 0;
+        align-content: center;
+        margin-top: 60px;
+        width: 100%;
+        height: 20px;
         color: white;
-        background-color:#285A8C !important;
-        transition: background-color 0.1s, color 0.1s;
-        transition-delay: 0.1s;
+        /*background-color: rgba(255, 255, 255, 0.2);*/
     }
     .nav:hover{
-        background-color:white !important;
-        color: black
-    }
-    .nav {
-        background-color: white;
-    }
-    .title {
-        margin: 0 30px;
-    }
+        color: black;
 
-
-    .list {
+        /*background-color: rgba(255, 255, 255, 0.5);*/
+    }
+    #inside-nav {
         display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+    }
+    #inside-nav:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .nav-item {
+        margin: 20px;
     }
 
-    .nav-item {
-        margin: 30px;
-    }
     .nav-item:hover {
-        color: #008dff;
         cursor: pointer;
     }
 
-    .hero {
+    #hero {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -102,26 +145,24 @@
         margin: 0 auto;
         max-width: 480px;
     }
-
     footer {
         text-align: center;
     }
     .black-btn{
         border-radius: 20px;
         background-color: black;
-        color: white;
+        color: #F1D47C;
         border: none;
         font-size: 12px;
         font-weight: bold;
         padding: 15px 45px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        transition: background-color 0.3s;
-        transition-delay: 0.1s;
     }
     .black-btn:hover{
         cursor:pointer;
-        background-color: #0088ff
+        background-color: #F1D47C;
+        color: black;
     }
     .white-btn{
         border-radius: 20px;
@@ -133,12 +174,13 @@
         padding: 15px 45px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        transition: background-color 0.3s;
-        transition-delay: 0.1s;
     }
     .white-btn:hover{
         cursor:pointer;
-        background-color: #e0e0e0;
+        background-color: #F1D47C;
+    }
+    button {
+        z-index: 1;
     }
     button span {
         position: absolute;
@@ -146,8 +188,8 @@
         background-color: rgba(0, 0, 0, 0.3);
         width: 100px;
         height: 100px;
-        margin-top: -50px;
-        margin-left: -50px;
+        margin-top: 50px;
+        margin-left: 50px;
         animation: ripple 1s;
         opacity: 0;
     }
@@ -162,76 +204,145 @@
             transform: scale(10);
         }
     }
-    /*button {*/
-    /*    border-radius: 20px;*/
-    /*    background: linear-gradient(to right, #23bb90, #0064cd);   !important;*/
-    /*    color: white;*/
-    /*    border: none;*/
-    /*    font-size: 12px;*/
-    /*    font-weight: bold;*/
-    /*    padding: 12px 45px;*/
-    /*    letter-spacing: 1px;*/
-    /*    text-transform: uppercase;*/
-    /*}*/
-    /*button:hover{*/
-    /*    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;*/
-    /*}*/
-
-
+    @keyframes rotate {
+        from {
+            rotate: 0deg;
+        }
+        to {
+            rotate: 360deg;
+        }
+    }
+    #blob {
+        z-index: 0;
+        background-color: white;
+        height: 500px;
+        aspect-ratio: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        border-radius: 50%;
+        background: linear-gradient(to right, #f1d47c, #6e1320);
+        animation: rotate 20s infinite;
+        filter: blur(200px);
+    }
 </style>
 <body ononline="onFunction()" onoffline="offFunction()">
 <div class="site" style="background-color:#f4f4f4" >
-    <nav class="nav" style="z-index: 1000000">
-        <div class="title">Northern Horizon</div>
-        <ul class="list">
-            <li class="nav-item" onclick="window.location.replace('/about')">About Us</li>
-            <li class="nav-item">Past Projects</li>
-        </ul>
+    <div id="blob" class="no-select"></div>
+<!--    if there are changes in window width, when it falls below a certain threshold,
+        make the navbar full width (phone screen)       -->
+    <nav class="nav">
+        <div id="inside-nav">
+            <div class="nav-item" onclick="window.location.replace('/')">Home</div>
+            <div class="nav-item" onclick="window.location.replace('/')">Work</div>
+            <div class="nav-item" onclick="window.location.replace('/')">About</div>
+            <div class="nav-item" onclick="window.location.replace('/')">Projects</div>
+            <div class="nav-item" onclick="window.location.replace('/')">Contact</div>
+        </div>
     </nav>
-    <div class="hero" style="background-image: linear-gradient(to right, #285A8C, #285A8C, #285A8C, #285A8C);">
-        <div class="hero-text">
-            <h1 style="font-size: 40px; color:white; text-align: center">We help students build skills</h1>
-            <p style="color:white; font-size: 17px; text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget euismod lectus, id euismod sapien.</p>
-            <br>
-        </div>
-        <div class="hero-image">
-            <img src="public/assets/team.png" alt="A team of people helping each other to build a lego tower.">
-        </div>
+    <div id="hero" style="background-color: black">
+        <h1 class="glitch" data-value="Minh Pham">Minh Pham</h1>
     </div>
-    <div style="background: #f6f5f7;
+    <section class="hidden">
+        <div style="
+    background-color: black;
     flex-direction: column;
-    margin: -20px 0;
-    padding-top: 110px; padding-bottom: 50px">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2 style="text-align: center;">About Us</h2>
-            <p style="text-align: center; margin-left: 200px; margin-right: 200px; max-width: 600px">
-                Northern Horizon is a project-based
-                learning program for students to develop their career-oriented skills and
-                portfolios by simulating the professional working environment.</p>
-            <button class="black-btn">Read more</button>
+    padding-top: 110px; padding-bottom: 110px">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h2 style="text-align: center;" class="glitch" id="work" data-value="Work">Work</h2>
+                <p style="text-align: center; margin-left: 200px; margin-right: 200px; max-width: 600px">
+                    I have done some work, and they will show up over here
+                </p>
+                <button class="black-btn">Read more</button>
+            </div>
         </div>
-    </div>
-    <div style="background: black;
-    flex-direction: column;
-    padding-top: 50px; padding-bottom: 50px">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2 style="text-align: center; color: white">About Us</h2>
-            <p style="text-align: center; color: white; margin-left: 200px; margin-right: 200px; max-width: 600px">
-                Northern Horizon is a project-based
-                learning program for students to develop their career-oriented skills and
-                portfolios by simulating the professional working environment.</p>
-            <button class="white-btn">Read more</button>
+    </section>
+    <section class="hidden">
+        <div style="background: black;flex-direction: column;padding-top: 50px; padding-bottom: 50px">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h2 style="text-align: center" class="glitch" id="about" data-value="About Me">About Me</h2>
+                <p style="text-align: center; color: white; margin-left: 200px; margin-right: 200px; max-width: 600px">
+                    Northern Horizon is a project-based
+                    learning program for students to develop their career-oriented skills and
+                    portfolios by simulating the professional working environment.</p>
+                <button class="white-btn">Read more</button>
+            </div>
         </div>
-    </div>
+    </section>
 </div>
 </body>
 <script>
-    function onFunction() {
-        alert("You are now online.");
+    const blob = document.getElementById('blob');
+    document.body.onpointermove = event => {
+        const { clientX, clientY } = event;
+        const scrollX = window.scrollX || window.pageXOffset;
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        const adjustedX = clientX + scrollX;
+        const adjustedY = clientY + scrollY;
+
+        blob.animate({
+            left: `${adjustedX}px`,
+            top: `${adjustedY}px`
+        }, { duration: 1000, fill: "forwards" });
     }
 
-    function offFunction() {
-        alert("Your are offline. Some functionality may be unavailable.");
+    let hero = document.getElementById('hero');
+    let winHeight = window.innerHeight.toString() + 'px';
+    hero.style.setProperty('height', winHeight);
+    console.log();
+    //detect changes in window width and height
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let interval = null;
+    function glitch(event) {
+        let iteration = 0;
+        console.log(event.target.innerText);
+        clearInterval(interval);
+        interval = setInterval(() => {
+            event.target.innerText = event.target.innerText
+                .split("")
+                .map((letter, index) => {
+                    if (letter === " ") {
+                        return " "; // Preserve spaces
+                    }
+                    if (index < iteration) {
+                        return event.target.dataset.value[index];
+                    }
+                    return letters[Math.floor(Math.random() * 26)];
+                })
+                .join("");
+            if (iteration >= event.target.dataset.value.length) {
+                clearInterval(interval);
+            }
+            iteration += 1 / 3;
+        }, 40);
     }
+
+    document.querySelector('h1').onmouseover = function(event) {
+        glitch(event);
+    };
+    document.querySelector('#about').onmouseover = function(event) {
+        glitch(event);
+    }
+    document.querySelector('#work').onmouseover = function(event) {
+        glitch(event);
+    }
+
+    //hidden stuff js
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+            else {
+                entry.target.classList.remove('show');
+            }
+        })
+    })
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el)=> {})
 </script>
 </html>

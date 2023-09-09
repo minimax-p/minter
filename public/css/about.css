@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 .row{
     display: flex;
     align-items: center;
@@ -24,9 +24,23 @@ a{
     background-size: 100% 70%;
     background-position:right bottom;
 }
-.wave-down {
+.about-blob{
     background-repeat: no-repeat;
-    background-size: 100% 50%;
+    background-size: 100% 90%;
+
+}
+.title1{
+    font-family: 'Poppins', sans-serif;
+}
+.title2{
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter; !important;
+}
+.title3{
+    font-family: 'Poppins', serif;
+    font-size: 28px;
+    margin: 0;
+    font-weight: lighter; !important;
 }
 .flex-60{
     flex-basis: 60%;
@@ -79,7 +93,7 @@ h1 {
 }
 h2{
     font-family: 'Poppins', sans-serif;
-    font-size: 2.3em;
+    font-size: 1.5em;
     margin: 0;
 }
 .title {
@@ -125,10 +139,11 @@ h2{
     color: gray;
 }
 .hero-image img {
+    margin-left: 30px;
     width: 85%;
     height: auto;
     offset-position: 100px;
-    max-width: 600px;
+    max-width: 500px;
     transform: translateY(15%) translateX(5%) scale(120%);
 }
 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 .row{
     display: flex;
     align-items: center;
@@ -24,30 +24,13 @@ a{
     background-size: 100% 70%;
     background-position:right bottom;
 }
-.wave-down {
+.about-blob{
     background-repeat: no-repeat;
-    background-size: 100% 50%;
+    background-size: 100% 90%;
+
 }
-.flex-60{
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-.flex-40{
-    flex-basis: 40%
-}
-.white{
-    color:white
-}
-.bg-white{
-    background: #f6f5f7;
-}
-.bg-black{
-    background: black
-}
+
+
 p{
     max-width: 600px;
 }
@@ -75,11 +58,13 @@ body {
     overflow: scroll;
 }
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', serif;
+    color: #285A8C; !important;
+    font-size: 40px;
 }
 h2{
     font-family: 'Poppins', sans-serif;
-    font-size: 2.3em;
+    font-size: 1.5em;
     margin: 0;
 }
 .title {
@@ -125,10 +110,11 @@ h2{
     color: gray;
 }
 .hero-image img {
+    margin-left: 30px;
     width: 85%;
     height: auto;
     offset-position: 100px;
-    max-width: 600px;
+    max-width: 500px;
     transform: translateY(15%) translateX(5%) scale(120%);
 }
 
